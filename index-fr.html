@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Unit Testing After, Test First et TDD</title>
+		<title>Unit Testing After, Before et TDD</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Antoine Vernois">
@@ -37,15 +37,52 @@
 			<div class="slides">
 				<section>
 					<section>
-						<h1>Unit testing After, First et TDD</h1>
+						<h1>Unit testing After, Before et TDD</h1>
 					
 						<p>
-							<small><a href="http://blog.crafting-labs.fr">Antoine Vernois</a> / <a href="http://twitter.com/avernois">@avernois</a></small>
+							<small><a href="https://blog.crafting-labs.fr">Antoine Vernois</a> / <a href="http://twitter.com/avernois">@avernois</a></small>
 						</p>
 					</section>
 
 					<section>
-						<h2>Who am I ?</h2>
+						<h2>Antoine Vernois</h2>
+						<p>Agile Software Craftsman / Journeyman</p>
+						<p>blog : <a href="https://blog.crafting-labs.fr">https://blog.crafting-labs.fr</a></p>
+						<p>twitter : <a href="http://twitter.com/avernois">@avernois</a></p>
+						<p>#ISpeakForFood</p>
+					</section>
+
+					<section>
+						<h3>Dev Open Sud</h3>
+						4, 5 et 6 oct <br>
+						les Angles (66)<br> 
+						le programme sera fait par ceux qui y seront<br>
+						<a href="http://www.devopensud.fr">www.devopensud.fr</a>
+						<br>
+						<br>
+
+						<h3>Agile Tour Toulouse</h3>
+						10 octobre<br>
+						Diagora<br>
+						Session Software Craftsmanship<br>
+						<a href="http://tour.agiletoulouse.org">tour.agiletoulouse.org</a>
+					</section>
+
+					<section>
+						<h2>Software Craftsmanship Toulouse</h2>
+						<h3>Bring Your Own Code</h3>
+						5 septembre<br>
+						Tau, place de la Daurade<br> 
+						<br>
+						<br>
+					
+						<h3>Table ronde : les frameworks</h3>
+						12 septembre<br>
+						Tau, place de la Daurade<br>
+						<br>
+						<br>
+
+						<a href="http://www.meetup.com/Software-Craftsmanship-Toulouse/">http://www.meetup.com/Software-Craftsmanship-Toulouse/ </a>
 					</section>
 
 					<section>
@@ -59,6 +96,7 @@
 								<li>des guerres de clan london vs. chicago</li>
 								<li>de test d'intégration</li>
 							</ul>
+							<li>les exemples seront en java</li>
 							<li class="fragment">oh. et oui, il se peut que j'exagère un peu... :)</li>
 						</ul>
 
@@ -67,9 +105,9 @@
 
 				<section>
 					<section>
-						<h2>Définition</h2>
+						<h2><span class="fragment">Ma </span>définition</h2>
 
-						<dl>
+						<dl class="fragment">
 							<dt>Unit test</dt>
 							<dd><p>un test qui vérifie un comportement d'un morceau de code.</p></dd>
 						</dl>
@@ -77,7 +115,7 @@
 					
 					<section>
 						<h2>Qualité d'un test unitaire</h2>
-						<ul>
+						<ul class="fragment">
 							<li><span class="fragment highlight-green">F</span>ast</li>
 							<li><span class="fragment highlight-green">I</span>solated</li>
 							<li><span class="fragment highlight-green">R</span>epeatable</li>
@@ -89,18 +127,21 @@
 					<section>
 						<h2>Pourquoi ?</h2>
 						<ul>
-							<li>parce que c'est à la mode !?</li>
-							<li></li>
-							<li>les tests explique ce que fait votre code</li>
-							<li>rendre un code testable (et testé) conduit souvent à un meilleur design</li>
-							<li>au plus tôt on trouve le problème, le moins cher coûte sa résolution</li>
+							<li class="fragment fade-out">parce que c'est à la mode !?</li>
+							
+							<li class="fragment">les tests sont une preuve que votre code fait ce qu'il est supposé faire.</li>
+							<li class="fragment">au plus tôt on trouve le problème, le moins cher coûte sa résolution.</li>
+							<li class="fragment">ils donnent confiance lorsqu'on fait des modifications.</li>
+							<li class="fragment">rendre un code testable (et testé) conduit souvent à un meilleur design.</li>
+							<li class="fragment">les tests expliquent ce que fait votre code.</li>
 						</ul>
 					</section>
 				</section>
 
 				<section>
 					<section>
-						<h2>Les tests après.</h2>
+						<h2>Test After.</h2>
+						<h3>Les tests après.</h3>
 					</section>
 
 					<section>
@@ -110,6 +151,7 @@
 					<section>
 						<h2>(faux) problèmes</h2>
 						<blockquote>C'est bon ça marche, pas besoin de test.</blockquote>
+						<blockquote class="fragment">Je suis à la bourre, et j'ai du fonctionnel plus important. J'écrirai les tests plus tard.</blockquote>
 						<blockquote class="fragment">Les tests c'est pour ceux qui savent pas coder.</blockquote>
 						<div class="fragment">
 							<img src="images/test.gif"><small>
@@ -117,7 +159,6 @@
 							<a href="http://thecodinglove.com/post/43737038742/when-an-intern-tells-me-tests-are-for-people-who-dont">thecodinglove.com</a></small>
 							</p>
 						</div>
-						<blockquote class="fragment">Je suis à la bourre, et j'ai du fonctionnel plus important. J'écrirai les tests plus tard.</blockquote>
 					</section>
 				
 					<section>
@@ -132,7 +173,11 @@
 
 				<section>
 					<section>
-						<h2>Les tests d'abord</h2>
+						<h2>Test First</h2>
+						<h3>Les tests d'abord.</h3>
+					</section>
+					<section>
+						<h2>Les tests d'abord.</h3>
 						<ol>
 							<li>Réfléchir à ce que je veux faire.</li>
 							<li>Écrire les tests correspondants.</li>
@@ -155,8 +200,11 @@
 
 				<section>
 					<section>
-						<h2>Développement guidé par les tests</h2>
 						<h2>TDD : Test Driven Développement</h2>
+						<h3>Développement guidé par les tests</h3>
+					</section>
+					<section>
+						<h3>Développement guidé par les tests</h3>
 						<ol>
 							<li>Écrire exactement un test qui échoue.</li>
 							<li>Le faire passer.</li>
