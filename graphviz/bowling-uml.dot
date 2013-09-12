@@ -1,0 +1,52 @@
+ digraph G {
+ 	fontname = "Bitstream Vera Sans"
+    fontsize = 8
+
+    node [
+    	fontname = "Bitstream Vera Sans"
+        fontsize = 8
+        shape = "record"
+    ]
+
+    edge [
+    	fontname = "Bitstream Vera Sans"
+        fontsize = 8
+    ]
+
+ 	Game [
+    	label = "{Game||+ score : int\l+ rolls(pins : int)}"
+    ]
+
+    Frame [
+    	label = "{Frame||+ score : int\l+ rolls(pins : int)}"
+    ]
+
+	Roll [
+    	label = "{Roll|pins : int|}"
+    ]
+
+    Tenth_Frame [
+    	label = "{Tenth Frame||}"
+    ]
+
+    Tenth_Frame -> Frame [
+    	arrowhead = "empty"
+    ]
+
+    Game -> Frame [
+    	arrowhead = "open"
+    	headlabel = "10"
+    ]
+
+    Frame -> Roll [
+		arrowhead = "open"
+    	headlabel = "1..2"
+    ]
+
+    Tenth_Frame -> Roll [
+		arrowhead = "open"
+    	headlabel = "2..3	 	"
+    ]
+    
+
+ }
