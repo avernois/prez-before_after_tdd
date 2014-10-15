@@ -149,6 +149,19 @@
 					</section>
 				
 					<section>
+       					<div data-svg-fragment="images/bowling.svg#[*|label=base]">
+       						<a class="fragment" title="[*|label=game]"></a>
+       						<a class="fragment" title="[*|label=frame]"></a>
+       						<a class="fragment" title="[*|label=game_frame]"></a>
+       						<a class="fragment" title="[*|label=roll]"></a>
+       						<a class="fragment" title="[*|label=frame_roll]"></a>
+       						<a class="fragment" title="[*|label=tenth_frame]"></a>
+       						<a class="fragment" title="[*|label=tenth_frame_frame]"></a>
+       						<a class="fragment" title="[*|label=tenth_frame_roll]"></a>
+          				</div>
+        			</section>
+
+					<section>
 						<h2>(faux) problèmes</h2>
 						<blockquote>C'est bon ça marche, pas besoin de test.</blockquote>
 						<blockquote class="fragment">Je suis à la bourre, et j'ai du fonctionnel plus important. J'écrirai les tests plus tard.</blockquote>
@@ -271,7 +284,8 @@
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/reveal-svg-fragment.js', condition: function(){ return !!document.querySelector( '[data-svg-fragment]' ); } }
 					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
 					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
